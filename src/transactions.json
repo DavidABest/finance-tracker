@@ -1,0 +1,2194 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2024-08-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 2,
+      "date": "2024-08-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 3,
+      "date": "2024-08-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 4,
+      "date": "2024-08-02",
+      "description": "GROCERY STORE - WHOLE FOODS",
+      "amount": -127.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 5,
+      "date": "2024-08-03",
+      "description": "GAS STATION - SHELL",
+      "amount": -58.23,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 6,
+      "date": "2024-08-05",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -142.67,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 7,
+      "date": "2024-08-06",
+      "description": "COFFEE SHOP - STARBUCKS",
+      "amount": -12.75,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 8,
+      "date": "2024-08-07",
+      "description": "INTERNET BILL - COMCAST",
+      "amount": -79.99,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Internet",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 9,
+      "date": "2024-08-09",
+      "description": "GROCERY STORE - KROGER",
+      "amount": -95.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 10,
+      "date": "2024-08-11",
+      "description": "RESTAURANT - OLIVE GARDEN",
+      "amount": -48.92,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 11,
+      "date": "2024-08-12",
+      "description": "ATM WITHDRAWAL",
+      "amount": -100.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 12,
+      "date": "2024-08-14",
+      "description": "PHONE BILL - VERIZON",
+      "amount": -85.43,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Phone",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 13,
+      "date": "2024-08-16",
+      "description": "GAS STATION - EXXON",
+      "amount": -52.11,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 14,
+      "date": "2024-08-18",
+      "description": "GROCERY STORE - TARGET",
+      "amount": -134.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 15,
+      "date": "2024-08-20",
+      "description": "STREAMING - NETFLIX",
+      "amount": -15.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 16,
+      "date": "2024-08-22",
+      "description": "CAR INSURANCE - GEICO",
+      "amount": -145.22,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Insurance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 17,
+      "date": "2024-08-24",
+      "description": "RESTAURANT - CHIPOTLE",
+      "amount": -18.75,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 18,
+      "date": "2024-08-26",
+      "description": "GROCERY STORE - PUBLIX",
+      "amount": -89.34,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 19,
+      "date": "2024-08-28",
+      "description": "GYM MEMBERSHIP - PLANET FITNESS",
+      "amount": -22.99,
+      "type": "debit",
+      "category": "Health",
+      "subcategory": "Fitness",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 20,
+      "date": "2024-08-30",
+      "description": "PHARMACY - CVS",
+      "amount": -34.67,
+      "type": "debit",
+      "category": "Healthcare",
+      "subcategory": "Pharmacy",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 21,
+      "date": "2024-09-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 22,
+      "date": "2024-09-30",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 23,
+      "date": "2024-09-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 24,
+      "date": "2024-09-03",
+      "description": "GROCERY STORE - WHOLE FOODS",
+      "amount": -112.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 25,
+      "date": "2024-09-05",
+      "description": "GAS STATION - BP",
+      "amount": -46.92,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 26,
+      "date": "2024-09-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -98.45,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 27,
+      "date": "2024-09-09",
+      "description": "COFFEE SHOP - LOCAL CAFE",
+      "amount": -8.50,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 28,
+      "date": "2024-09-11",
+      "description": "GROCERY STORE - SAFEWAY",
+      "amount": -87.34,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 29,
+      "date": "2024-09-13",
+      "description": "RESTAURANT - SUBWAY",
+      "amount": -14.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 30,
+      "date": "2024-09-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -80.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 31,
+      "date": "2024-09-17",
+      "description": "WATER BILL - CITY UTILITIES",
+      "amount": -42.33,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Water",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 32,
+      "date": "2024-09-19",
+      "description": "GAS STATION - CHEVRON",
+      "amount": -54.88,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 33,
+      "date": "2024-09-21",
+      "description": "GROCERY STORE - WALMART",
+      "amount": -156.23,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 34,
+      "date": "2024-09-23",
+      "description": "STREAMING - SPOTIFY",
+      "amount": -9.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 35,
+      "date": "2024-09-25",
+      "description": "RESTAURANT - PIZZA HUT",
+      "amount": -32.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 36,
+      "date": "2024-09-27",
+      "description": "CAR MAINTENANCE - OIL CHANGE",
+      "amount": -49.99,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Maintenance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 37,
+      "date": "2024-09-29",
+      "description": "DEPARTMENT STORE - TARGET",
+      "amount": -78.92,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Retail",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 38,
+      "date": "2024-10-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 39,
+      "date": "2024-10-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 40,
+      "date": "2024-10-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 41,
+      "date": "2024-10-03",
+      "description": "GROCERY STORE - PUBLIX",
+      "amount": -98.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 42,
+      "date": "2024-10-05",
+      "description": "GAS STATION - SHELL",
+      "amount": -51.34,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 43,
+      "date": "2024-10-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -76.89,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 44,
+      "date": "2024-10-09",
+      "description": "COFFEE SHOP - DUNKIN",
+      "amount": -11.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 45,
+      "date": "2024-10-11",
+      "description": "GROCERY STORE - ALDI",
+      "amount": -67.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 46,
+      "date": "2024-10-13",
+      "description": "RESTAURANT - MCDONALD'S",
+      "amount": -12.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 47,
+      "date": "2024-10-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -120.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 48,
+      "date": "2024-10-17",
+      "description": "STREAMING - HULU",
+      "amount": -12.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 49,
+      "date": "2024-10-19",
+      "description": "GAS STATION - MARATHON",
+      "amount": -46.78,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 50,
+      "date": "2024-10-21",
+      "description": "GROCERY STORE - FOOD LION",
+      "amount": -123.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 51,
+      "date": "2024-10-23",
+      "description": "DOCTOR VISIT - FAMILY PRACTICE",
+      "amount": -45.00,
+      "type": "debit",
+      "category": "Healthcare",
+      "subcategory": "Medical",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 52,
+      "date": "2024-10-25",
+      "description": "RESTAURANT - TACO BELL",
+      "amount": -16.23,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 53,
+      "date": "2024-10-27",
+      "description": "DEPARTMENT STORE - MACY'S",
+      "amount": -89.99,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Clothing",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 54,
+      "date": "2024-10-29",
+      "description": "HALLOWEEN SUPPLIES - PARTY CITY",
+      "amount": -45.67,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Events",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 55,
+      "date": "2024-10-31",
+      "description": "RESTAURANT - OLIVE GARDEN",
+      "amount": -52.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 56,
+      "date": "2024-11-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 57,
+      "date": "2024-11-30",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 58,
+      "date": "2024-11-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 59,
+      "date": "2024-11-03",
+      "description": "GROCERY STORE - HARRIS TEETER",
+      "amount": -87.92,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 60,
+      "date": "2024-11-05",
+      "description": "GAS STATION - EXXON",
+      "amount": -53.67,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 61,
+      "date": "2024-11-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -89.14,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 62,
+      "date": "2024-11-09",
+      "description": "COFFEE SHOP - STARBUCKS",
+      "amount": -9.85,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 63,
+      "date": "2024-11-11",
+      "description": "GROCERY STORE - COSTCO",
+      "amount": -145.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 64,
+      "date": "2024-11-13",
+      "description": "RESTAURANT - BURGER KING",
+      "amount": -13.47,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 65,
+      "date": "2024-11-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -60.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 66,
+      "date": "2024-11-17",
+      "description": "STREAMING - DISNEY+",
+      "amount": -7.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 67,
+      "date": "2024-11-19",
+      "description": "GAS STATION - BP",
+      "amount": -49.23,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 68,
+      "date": "2024-11-21",
+      "description": "GROCERY STORE - KROGER",
+      "amount": -98.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 69,
+      "date": "2024-11-23",
+      "description": "THANKSGIVING DINNER - WHOLE FOODS",
+      "amount": -187.34,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 70,
+      "date": "2024-11-25",
+      "description": "BLACK FRIDAY - BEST BUY",
+      "amount": -299.99,
+      "type": "debit",
+      "category": "Electronics",
+      "subcategory": "Shopping",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 71,
+      "date": "2024-11-27",
+      "description": "RESTAURANT - APPLEBEE'S",
+      "amount": -35.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 72,
+      "date": "2024-11-29",
+      "description": "BLACK FRIDAY - AMAZON",
+      "amount": -156.78,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Online",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 73,
+      "date": "2024-12-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 74,
+      "date": "2024-12-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 75,
+      "date": "2024-12-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 76,
+      "date": "2024-12-03",
+      "description": "GROCERY STORE - WHOLE FOODS",
+      "amount": -134.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 77,
+      "date": "2024-12-05",
+      "description": "GAS STATION - CHEVRON",
+      "amount": -56.78,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 78,
+      "date": "2024-12-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -124.89,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 79,
+      "date": "2024-12-09",
+      "description": "COFFEE SHOP - LOCAL CAFE",
+      "amount": -7.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 80,
+      "date": "2024-12-11",
+      "description": "GROCERY STORE - SAFEWAY",
+      "amount": -76.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 81,
+      "date": "2024-12-13",
+      "description": "CHRISTMAS SHOPPING - MALL",
+      "amount": -234.67,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Gifts",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 82,
+      "date": "2024-12-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -200.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 83,
+      "date": "2024-12-17",
+      "description": "CHRISTMAS SHOPPING - AMAZON",
+      "amount": -189.45,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Online",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 84,
+      "date": "2024-12-19",
+      "description": "GAS STATION - SHELL",
+      "amount": -52.34,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 85,
+      "date": "2024-12-21",
+      "description": "GROCERY STORE - WALMART",
+      "amount": -112.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 86,
+      "date": "2024-12-23",
+      "description": "CHRISTMAS DINNER SUPPLIES",
+      "amount": -156.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 87,
+      "date": "2024-12-25",
+      "description": "RESTAURANT - CHRISTMAS DINNER",
+      "amount": -89.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 88,
+      "date": "2024-12-27",
+      "description": "STREAMING - HBO MAX",
+      "amount": -14.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 89,
+      "date": "2024-12-29",
+      "description": "NEW YEAR PARTY SUPPLIES",
+      "amount": -67.89,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Events",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 90,
+      "date": "2024-12-31",
+      "description": "RESTAURANT - NEW YEAR'S EVE",
+      "amount": -125.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 91,
+      "date": "2025-01-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 92,
+      "date": "2025-01-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 93,
+      "date": "2025-01-02",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 94,
+      "date": "2025-01-03",
+      "description": "GROCERY STORE - WHOLE FOODS",
+      "amount": -145.23,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 95,
+      "date": "2025-01-05",
+      "description": "GAS STATION - EXXON",
+      "amount": -48.67,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 96,
+      "date": "2025-01-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -167.34,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 97,
+      "date": "2025-01-09",
+      "description": "COFFEE SHOP - STARBUCKS",
+      "amount": -10.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 98,
+      "date": "2025-01-11",
+      "description": "GROCERY STORE - KROGER",
+      "amount": -89.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 99,
+      "date": "2025-01-13",
+      "description": "RESTAURANT - CHIPOTLE",
+      "amount": -17.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 100,
+      "date": "2025-01-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -100.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 101,
+      "date": "2025-01-17",
+      "description": "CAR INSURANCE - GEICO",
+      "amount": -145.22,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Insurance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 102,
+      "date": "2025-01-19",
+      "description": "GAS STATION - BP",
+      "amount": -54.78,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 103,
+      "date": "2025-01-21",
+      "description": "GROCERY STORE - TARGET",
+      "amount": -123.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 104,
+      "date": "2025-01-23",
+      "description": "STREAMING - NETFLIX",
+      "amount": -15.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 105,
+      "date": "2025-01-25",
+      "description": "RESTAURANT - OLIVE GARDEN",
+      "amount": -46.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 106,
+      "date": "2025-01-27",
+      "description": "PHARMACY - CVS",
+      "amount": -28.45,
+      "type": "debit",
+      "category": "Healthcare",
+      "subcategory": "Pharmacy",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 107,
+      "date": "2025-01-29",
+      "description": "DEPARTMENT STORE - MACY'S",
+      "amount": -78.92,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Clothing",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 108,
+      "date": "2025-02-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 109,
+      "date": "2025-02-28",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 110,
+      "date": "2025-02-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 111,
+      "date": "2025-02-03",
+      "description": "GROCERY STORE - PUBLIX",
+      "amount": -98.34,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 112,
+      "date": "2025-02-05",
+      "description": "GAS STATION - SHELL",
+      "amount": -52.11,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 113,
+      "date": "2025-02-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -143.67,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 114,
+      "date": "2025-02-09",
+      "description": "COFFEE SHOP - LOCAL CAFE",
+      "amount": -9.50,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 115,
+      "date": "2025-02-11",
+      "description": "GROCERY STORE - ALDI",
+      "amount": -76.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 116,
+      "date": "2025-02-13",
+      "description": "VALENTINE'S DINNER - FANCY RESTAURANT",
+      "amount": -125.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 117,
+      "date": "2025-02-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -80.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 118,
+      "date": "2025-02-17",
+      "description": "WATER BILL - CITY UTILITIES",
+      "amount": -38.22,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Water",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 119,
+      "date": "2025-02-19",
+      "description": "GAS STATION - CHEVRON",
+      "amount": -49.88,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 120,
+      "date": "2025-02-21",
+      "description": "GROCERY STORE - FOOD LION",
+      "amount": -134.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 121,
+      "date": "2025-02-23",
+      "description": "STREAMING - SPOTIFY",
+      "amount": -9.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 122,
+      "date": "2025-02-25",
+      "description": "RESTAURANT - PIZZA HUT",
+      "amount": -28.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 123,
+      "date": "2025-02-27",
+      "description": "CAR MAINTENANCE - TIRE ROTATION",
+      "amount": -65.00,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Maintenance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 124,
+      "date": "2025-03-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 125,
+      "date": "2025-03-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 126,
+      "date": "2025-03-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 127,
+      "date": "2025-03-03",
+      "description": "GROCERY STORE - HARRIS TEETER",
+      "amount": -112.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 128,
+      "date": "2025-03-05",
+      "description": "GAS STATION - MARATHON",
+      "amount": -56.34,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 129,
+      "date": "2025-03-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -98.45,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 130,
+      "date": "2025-03-09",
+      "description": "COFFEE SHOP - DUNKIN",
+      "amount": -11.75,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 131,
+      "date": "2025-03-11",
+      "description": "GROCERY STORE - COSTCO",
+      "amount": -189.23,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 132,
+      "date": "2025-03-13",
+      "description": "RESTAURANT - SUBWAY",
+      "amount": -15.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 133,
+      "date": "2025-03-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -120.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 134,
+      "date": "2025-03-17",
+      "description": "STREAMING - HULU",
+      "amount": -12.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 135,
+      "date": "2025-03-19",
+      "description": "GAS STATION - EXXON",
+      "amount": -53.67,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 136,
+      "date": "2025-03-21",
+      "description": "GROCERY STORE - WALMART",
+      "amount": -98.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 137,
+      "date": "2025-03-23",
+      "description": "DOCTOR VISIT - ANNUAL CHECKUP",
+      "amount": -55.00,
+      "type": "debit",
+      "category": "Healthcare",
+      "subcategory": "Medical",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 138,
+      "date": "2025-03-25",
+      "description": "RESTAURANT - TACO BELL",
+      "amount": -18.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 139,
+      "date": "2025-03-27",
+      "description": "DEPARTMENT STORE - TARGET",
+      "amount": -89.45,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Retail",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 140,
+      "date": "2025-03-29",
+      "description": "SPRING BREAK TRIP - HOTEL",
+      "amount": -245.67,
+      "type": "debit",
+      "category": "Travel",
+      "subcategory": "Accommodation",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 141,
+      "date": "2025-04-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 142,
+      "date": "2025-04-30",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 143,
+      "date": "2025-04-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 144,
+      "date": "2025-04-03",
+      "description": "GROCERY STORE - WHOLE FOODS",
+      "amount": -123.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 145,
+      "date": "2025-04-05",
+      "description": "GAS STATION - BP",
+      "amount": -48.92,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 146,
+      "date": "2025-04-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -76.34,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 147,
+      "date": "2025-04-09",
+      "description": "COFFEE SHOP - STARBUCKS",
+      "amount": -8.75,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 148,
+      "date": "2025-04-11",
+      "description": "GROCERY STORE - SAFEWAY",
+      "amount": -87.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 149,
+      "date": "2025-04-13",
+      "description": "RESTAURANT - MCDONALD'S",
+      "amount": -14.23,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 150,
+      "date": "2025-04-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -60.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 151,
+      "date": "2025-04-17",
+      "description": "CAR INSURANCE - GEICO",
+      "amount": -145.22,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Insurance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 152,
+      "date": "2025-04-19",
+      "description": "GAS STATION - SHELL",
+      "amount": -51.78,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 153,
+      "date": "2025-04-21",
+      "description": "GROCERY STORE - KROGER",
+      "amount": -104.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 154,
+      "date": "2025-04-23",
+      "description": "STREAMING - DISNEY+",
+      "amount": -7.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 155,
+      "date": "2025-04-25",
+      "description": "RESTAURANT - APPLEBEE'S",
+      "amount": -39.84,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 156,
+      "date": "2025-04-27",
+      "description": "PHARMACY - WALGREENS",
+      "amount": -22.45,
+      "type": "debit",
+      "category": "Healthcare",
+      "subcategory": "Pharmacy",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 157,
+      "date": "2025-04-29",
+      "description": "HOME IMPROVEMENT - HOME DEPOT",
+      "amount": -156.78,
+      "type": "debit",
+      "category": "Home",
+      "subcategory": "Improvement",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 158,
+      "date": "2025-05-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 159,
+      "date": "2025-05-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 160,
+      "date": "2025-05-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 161,
+      "date": "2025-05-03",
+      "description": "GROCERY STORE - PUBLIX",
+      "amount": -134.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 162,
+      "date": "2025-05-05",
+      "description": "GAS STATION - CHEVRON",
+      "amount": -56.78,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 163,
+      "date": "2025-05-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -92.67,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 164,
+      "date": "2025-05-09",
+      "description": "COFFEE SHOP - LOCAL CAFE",
+      "amount": -7.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 165,
+      "date": "2025-05-11",
+      "description": "MOTHER'S DAY BRUNCH",
+      "amount": -89.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 166,
+      "date": "2025-05-13",
+      "description": "RESTAURANT - BURGER KING",
+      "amount": -13.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 167,
+      "date": "2025-05-15",
+      "description": "ATM WITHDRAWAL",
+      "amount": -100.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 168,
+      "date": "2025-05-17",
+      "description": "CAR MAINTENANCE - OIL CHANGE",
+      "amount": -55.99,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Maintenance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 169,
+      "date": "2025-05-19",
+      "description": "GAS STATION - MARATHON",
+      "amount": -52.34,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 170,
+      "date": "2025-05-21",
+      "description": "GROCERY STORE - FOOD LION",
+      "amount": -112.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 171,
+      "date": "2025-05-23",
+      "description": "STREAMING - PRIME VIDEO",
+      "amount": -8.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 172,
+      "date": "2025-05-25",
+      "description": "RESTAURANT - PIZZA HUT",
+      "amount": -31.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 173,
+      "date": "2025-05-27",
+      "description": "MEMORIAL DAY BBQ SUPPLIES",
+      "amount": -78.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 174,
+      "date": "2025-05-29",
+      "description": "DEPARTMENT STORE - BEST BUY",
+      "amount": -199.99,
+      "type": "debit",
+      "category": "Electronics",
+      "subcategory": "Shopping",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 175,
+      "date": "2025-06-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 176,
+      "date": "2025-06-30",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 177,
+      "date": "2025-06-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 178,
+      "date": "2025-06-03",
+      "description": "GROCERY STORE - HARRIS TEETER",
+      "amount": -89.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 179,
+      "date": "2025-06-05",
+      "description": "GAS STATION - EXXON",
+      "amount": -47.89,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 180,
+      "date": "2025-06-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -118.92,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 181,
+      "date": "2025-06-09",
+      "description": "COFFEE SHOP - DUNKIN",
+      "amount": -11.50,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 182,
+      "date": "2025-06-11",
+      "description": "GROCERY STORE - ALDI",
+      "amount": -56.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 183,
+      "date": "2025-06-13",
+      "description": "RESTAURANT - CHIPOTLE",
+      "amount": -19.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 184,
+      "date": "2025-06-15",
+      "description": "FATHER'S DAY DINNER",
+      "amount": -95.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 185,
+      "date": "2025-06-17",
+      "description": "ATM WITHDRAWAL",
+      "amount": -80.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 186,
+      "date": "2025-06-19",
+      "description": "WATER BILL - CITY UTILITIES",
+      "amount": -29.78,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Water",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 187,
+      "date": "2025-06-21",
+      "description": "GAS STATION - BP",
+      "amount": -54.12,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 188,
+      "date": "2025-06-23",
+      "description": "GROCERY STORE - COSTCO",
+      "amount": -145.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 189,
+      "date": "2025-06-25",
+      "description": "STREAMING - HBO MAX",
+      "amount": -14.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 190,
+      "date": "2025-06-27",
+      "description": "RESTAURANT - OLIVE GARDEN",
+      "amount": -48.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 191,
+      "date": "2025-06-29",
+      "description": "SUMMER VACATION - FLIGHT",
+      "amount": -425.67,
+      "type": "debit",
+      "category": "Travel",
+      "subcategory": "Transportation",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 192,
+      "date": "2025-07-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 193,
+      "date": "2025-07-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 194,
+      "date": "2025-07-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 195,
+      "date": "2025-07-03",
+      "description": "GROCERY STORE - WHOLE FOODS",
+      "amount": -102.34,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 196,
+      "date": "2025-07-04",
+      "description": "FOURTH OF JULY BBQ SUPPLIES",
+      "amount": -87.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 197,
+      "date": "2025-07-06",
+      "description": "GAS STATION - SHELL",
+      "amount": -61.45,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 198,
+      "date": "2025-07-08",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -156.89,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 199,
+      "date": "2025-07-10",
+      "description": "COFFEE SHOP - STARBUCKS",
+      "amount": -10.75,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 200,
+      "date": "2025-07-12",
+      "description": "VACATION - HOTEL STAY",
+      "amount": -189.67,
+      "type": "debit",
+      "category": "Travel",
+      "subcategory": "Accommodation",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 201,
+      "date": "2025-07-14",
+      "description": "RESTAURANT - VACATION DINING",
+      "amount": -125.89,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 202,
+      "date": "2025-07-16",
+      "description": "ATM WITHDRAWAL",
+      "amount": -200.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 203,
+      "date": "2025-07-18",
+      "description": "CAR INSURANCE - GEICO",
+      "amount": -145.22,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Insurance",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 204,
+      "date": "2025-07-20",
+      "description": "VACATION ACTIVITIES",
+      "amount": -156.78,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Activities",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 205,
+      "date": "2025-07-22",
+      "description": "GROCERY STORE - BACK FROM VACATION",
+      "amount": -87.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 206,
+      "date": "2025-07-24",
+      "description": "STREAMING - YOUTUBE PREMIUM",
+      "amount": -11.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 207,
+      "date": "2025-07-26",
+      "description": "GAS STATION - CHEVRON",
+      "amount": -58.23,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 208,
+      "date": "2025-07-28",
+      "description": "RESTAURANT - TACO BELL",
+      "amount": -17.56,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 209,
+      "date": "2025-07-30",
+      "description": "DEPARTMENT STORE - MACY'S",
+      "amount": -89.99,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Clothing",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 210,
+      "date": "2025-08-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 211,
+      "date": "2025-08-03",
+      "description": "GROCERY STORE - PUBLIX",
+      "amount": -156.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 212,
+      "date": "2025-08-05",
+      "description": "GAS STATION - MARATHON",
+      "amount": -64.23,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 213,
+      "date": "2025-08-07",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -142.89,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 214,
+      "date": "2025-08-09",
+      "description": "COFFEE SHOP - LOCAL CAFE",
+      "amount": -8.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 215,
+      "date": "2025-08-11",
+      "description": "GROCERY STORE - SAFEWAY",
+      "amount": -93.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 216,
+      "date": "2025-08-13",
+      "description": "RESTAURANT - MCDONALD'S",
+      "amount": -12.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 217,
+      "date": "2025-08-15",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 218,
+      "date": "2025-08-16",
+      "description": "ATM WITHDRAWAL",
+      "amount": -100.00,
+      "type": "debit",
+      "category": "Cash",
+      "subcategory": "ATM Withdrawal",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 219,
+      "date": "2025-08-17",
+      "description": "COFFEE SHOP - MORNING COFFEE",
+      "amount": -6.75,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    }
+  ]
+}

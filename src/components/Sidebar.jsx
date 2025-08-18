@@ -1,6 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom'
 // import { IconName } from "react-icons/fa";
-import { FaHome, FaMoneyCheckAlt, FaChartLine, FaCog } from 'react-icons/fa';
+import { FaHome, FaMoneyCheckAlt, FaChartLine, FaCog, FaInfoCircle } from 'react-icons/fa';
 
 function Sidebar() {
   return (
@@ -12,24 +12,29 @@ function Sidebar() {
       <br></br>
       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         <li>
-          <a href="#dashboard" className="text-red-950">
+          <Link to="/dashboard" className="text-red-950">
             <SideBarIcon icon={<FaHome size="28" />} text="Dashboard"/> 
-          </a>
+          </Link>
         </li>
         <li >
-          <a href="#transactions">
+          <Link to="/transactions">
             <SideBarIcon icon={<FaMoneyCheckAlt size="28" />} text="Transactions"/> 
-          </a>
+          </Link>
         </li>
         <li >
-          <a href="#reports">
-            <SideBarIcon icon={<FaChartLine size="28" />} ext="Reports"/> 
-          </a>
+          <Link to="/reports">
+            <SideBarIcon icon={<FaChartLine size="28" />} text="Reports"/> 
+          </Link>
         </li>
-        <li c>
-          <a href="#settings">
-            <SideBarIcon icon={<FaChartLine size="28" />} text="Settings" /> 
-          </a>
+        <li>
+          <Link to="/settings">
+            <SideBarIcon icon={<FaCog size="28" />} text="Settings" /> 
+          </Link>
+        </li>
+        <li>
+          <Link to="/about">
+            <SideBarIcon icon={<FaInfoCircle size="28" />} text="About" />
+          </Link>
         </li>
       </ul>
     </div>
