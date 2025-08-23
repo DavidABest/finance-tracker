@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
+import { Transaction } from './types'
 
 const PROJECT_URL = import.meta.env.VITE_SUPABASE_URL
 const ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
@@ -6,7 +7,7 @@ const ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
 const supabase = createClient(PROJECT_URL, ANON_KEY)
 
 // Get all transactions
-export async function getAllTransactions(userId = null) {
+export async function getAllTransactions(userId: string | null = null): Promise<Transaction[]> {
   let query = supabase
     .from('transactions')
     .select('*')
@@ -22,11 +23,11 @@ export async function getAllTransactions(userId = null) {
     throw new Error(`Failed to fetch transactions: ${error.message}`)
   }
   
-  return data
+  return data as Transaction[]
 }
 
 // Get spending by category
-export async function getSpendingByCategory(userId = null) {
+export async function getSpendingByCategory(userId: string | null = null) {
   let query = supabase
     .from('transactions')
     .select('category, amount')
@@ -46,7 +47,7 @@ export async function getSpendingByCategory(userId = null) {
 }
 
 // Add a new transaction
-export async function addTransaction(transaction) {
+export async function addTransaction(transaction: Omit<Transaction, 'id'>): Promise<Transaction> {
   const { data, error } = await supabase
     .from('transactions')
     .insert([transaction])
@@ -56,11 +57,11 @@ export async function addTransaction(transaction) {
     throw new Error(`Failed to add transaction: ${error.message}`)
   }
   
-  return data[0]
+  return data[0] as Transaction
 }
 
 // Update a transaction
-export async function updateTransaction(id, updates) {
+export async function updateTransaction(id: number, updates: Partial<Transaction>): Promise<Transaction> {
   const { data, error } = await supabase
     .from('transactions')
     .update(updates)
@@ -71,11 +72,11 @@ export async function updateTransaction(id, updates) {
     throw new Error(`Failed to update transaction: ${error.message}`)
   }
   
-  return data[0]
+  return data[0] as Transaction
 }
 
 // Delete a transaction
-export async function deleteTransaction(id) {
+export async function deleteTransaction(id: number): Promise<boolean> {
   const { error } = await supabase
     .from('transactions')
     .delete()

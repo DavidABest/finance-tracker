@@ -41,11 +41,11 @@ function Sidebar() {
   );
 }
 
-const SideBarIcon = ({ icon, text = "tooltip 💡" }) => (
+const SideBarIcon = ({ icon, text = "tooltip 💡" }: { icon: React.ReactElement; text?: string }) => (
    <div className="sidebar-icon group">
     {icon}
 
-    <span class="sidebar-tooltip group-hover:scale-100">
+    <span className="sidebar-tooltip group-hover:scale-100">
         {text}
     </span>
    </div>

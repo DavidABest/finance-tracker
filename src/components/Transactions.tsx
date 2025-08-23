@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import Sidebar from "./Sidebar";
 import { getAllTransactions } from '../supabaseClient';
+import { Transaction } from '../types';
 
 function Transactions() {
-    const [transactions, setTransactions] = useState([]);
-    const [filteredTransactions, setFilteredTransactions] = useState([]);
+    const [transactions, setTransactions] = useState<Transaction[]>([]);
+    const [filteredTransactions, setFilteredTransactions] = useState<Transaction[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null);
     const [searchTerm, setSearchTerm] = useState('');
     const [categoryFilter, setCategoryFilter] = useState('all');
     const [typeFilter, setTypeFilter] = useState('all');
@@ -22,7 +23,7 @@ function Transactions() {
             setTransactions(data);
             setFilteredTransactions(data);
         } catch (err) {
-            setError(err.message);
+            setError(err instanceof Error ? err.message : 'An error occurred');
         } finally {
             setLoading(false);
         }
@@ -60,14 +61,14 @@ function Transactions() {
     // Get unique categories for filter dropdown
     const uniqueCategories = [...new Set(transactions.map(t => t.category))].sort();
 
-    const formatCurrency = (amount) => {
+    const formatCurrency = (amount: number) => {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
         }).format(Math.abs(amount));
     };
 
-    const formatDate = (dateString) => {
+    const formatDate = (dateString: string) => {
         return new Date(dateString).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'short',
