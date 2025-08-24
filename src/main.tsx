@@ -7,7 +7,6 @@ import NotFoundPage from "./components/NotFoundPage";
 import Dashboard from "./components/Dashboard"
 import DashboardItems from "./components/DashboardItems";
 import Settings from "./components/Settings";
-import Reports from "./components/Reports";
 import Transactions from "./components/Transactions"
 import About from "./components/About";
 
@@ -17,7 +16,6 @@ const router = createBrowserRouter([
   {path: "/about", element: <About />},
   {path: "/dashboard/:id", element: <DashboardItems />},
   {path: "/settings", element: <Settings />},
-  {path: "/reports", element: <Reports />},
   {path: "/transactions", element: <Transactions />},
   {path: "*", element: <NotFoundPage />},
 ])

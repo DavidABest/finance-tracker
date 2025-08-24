@@ -152,10 +152,10 @@ function Dashboard() {
                     {recentTransactions.length > 0 ? (
                         <div className="space-y-4">
                             {recentTransactions.map((transaction) => (
-                                <div key={transaction.id} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div key={transaction.id} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
                                     <div className="flex flex-col">
-                                        <span className="font-medium">{transaction.description}</span>
-                                        <span className="text-sm text-gray-500">
+                                        <span className="font-medium dark:text-white">{transaction.description}</span>
+                                        <span className="text-sm text-gray-500 dark:text-gray-300">
                                             {new Date(transaction.date).toLocaleDateString()} • {transaction.category}
                                         </span>
                                     </div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 // import { IconName } from "react-icons/fa";
-import { FaHome, FaMoneyCheckAlt, FaChartLine, FaCog, FaInfoCircle } from 'react-icons/fa';
+import { FaHome, FaMoneyCheckAlt, FaCog, FaInfoCircle } from 'react-icons/fa';
 
 function Sidebar() {
   return (
@@ -19,11 +19,6 @@ function Sidebar() {
         <li >
           <Link to="/transactions">
             <SideBarIcon icon={<FaMoneyCheckAlt size="28" />} text="Transactions"/> 
-          </Link>
-        </li>
-        <li >
-          <Link to="/reports">
-            <SideBarIcon icon={<FaChartLine size="28" />} text="Reports"/> 
           </Link>
         </li>
         <li>
