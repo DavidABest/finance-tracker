@@ -19,6 +19,7 @@ function Transactions() {
     const fetchTransactions = async () => {
         try {
             setLoading(true);
+            setError(null);
             const data = await getAllTransactions();
             setTransactions(data);
             setFilteredTransactions(data);
