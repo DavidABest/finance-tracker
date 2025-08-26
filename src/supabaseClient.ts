@@ -4,7 +4,7 @@ import { Transaction } from './types'
 const PROJECT_URL = import.meta.env.VITE_SUPABASE_URL
 const ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-const supabase = createClient(PROJECT_URL, ANON_KEY)
+export const supabase = createClient(PROJECT_URL, ANON_KEY)
 
 // Get all transactions
 export async function getAllTransactions(userId: string | null = null): Promise<Transaction[]> {

@@ -9,19 +9,25 @@ import DashboardItems from "./components/DashboardItems";
 import Settings from "./components/Settings";
 import Transactions from "./components/Transactions"
 import About from "./components/About";
+import Login from "./components/Login";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const router = createBrowserRouter([
-  {path: "/", element: <App />},
-  {path: "/dashboard", element: <Dashboard />},
-  {path: "/about", element: <About />},
-  {path: "/dashboard/:id", element: <DashboardItems />},
-  {path: "/settings", element: <Settings />},
-  {path: "/transactions", element: <Transactions />},
+  {path: "/", element: <ProtectedRoute><App /></ProtectedRoute>},
+  {path: "/login", element: <Login />},
+  {path: "/dashboard", element: <ProtectedRoute><Dashboard /></ProtectedRoute>},
+  {path: "/about", element: <ProtectedRoute><About /></ProtectedRoute>},
+  {path: "/dashboard/:id", element: <ProtectedRoute><DashboardItems /></ProtectedRoute>},
+  {path: "/settings", element: <ProtectedRoute><Settings /></ProtectedRoute>},
+  {path: "/transactions", element: <ProtectedRoute><Transactions /></ProtectedRoute>},
   {path: "*", element: <NotFoundPage />},
 ])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router}/>
+    </AuthProvider>
   </StrictMode>,
 )
