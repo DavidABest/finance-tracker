@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom'
 // import { IconName } from "react-icons/fa";
-import { FaHome, FaMoneyCheckAlt, FaCog, FaInfoCircle } from 'react-icons/fa';
+import { FaHome, FaMoneyCheckAlt, FaCog, FaInfoCircle, FaSignOutAlt } from 'react-icons/fa';
+import { useAuth } from '../contexts/AuthContext';
 
 function Sidebar() {
+  const { signOut } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await signOut();
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
+
   return (
     <div className="fixed top-0 left-0 h-screen w-16 m-0
         flex flex-col
@@ -30,6 +41,11 @@ function Sidebar() {
           <Link to="/about">
             <SideBarIcon icon={<FaInfoCircle size="28" />} text="About" />
           </Link>
+        </li>
+        <li>
+          <button onClick={handleLogout} className="w-full">
+            <SideBarIcon icon={<FaSignOutAlt size="28" />} text="Logout" />
+          </button>
         </li>
       </ul>
     </div>

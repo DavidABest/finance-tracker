@@ -2,11 +2,17 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Alert, AlertDescription } from './ui/alert';
+import { Input } from './ui/input';
+import { Label } from './ui/label';
 import { supabase } from '../supabaseClient';
 
 function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isSignUp, setIsSignUp] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleGoogleLogin = async () => {
     try {
@@ -52,6 +58,60 @@ function Login() {
     }
   };
 
+  const handleEmailAuth = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (isSignUp && password !== confirmPassword) {
+      setError('Passwords do not match');
+      return;
+    }
+
+    try {
+      setLoading(true);
+      setError(null);
+
+      if (isSignUp) {
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: `${window.location.origin}/dashboard`
+          }
+        });
+        
+        console.log('Sign up response:', { data, error });
+        
+        if (error) {
+          console.error('Sign up error:', error);
+          throw error;
+        }
+        
+        if (data?.user && !data.user.email_confirmed_at) {
+          setError('Check your email to confirm your account');
+        }
+      }
+      else {
+        const { data, error } = await supabase.auth.signInWithPassword({
+          email,
+          password
+        });
+        
+        console.log('Sign in response:', { data, error });
+        
+        if (error) {
+          console.error('Sign in error:', error);
+          throw error;
+        }
+      }
+    }
+    catch (error) {
+      setError(error instanceof Error ? error.message : 'An error occurred');
+    }
+    finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-white dark:bg-[#1e2124] p-6">
       <Card className="w-full max-w-md">
@@ -63,18 +123,91 @@ function Login() {
         </CardHeader>
         <CardContent className="space-y-4">
           {error && (
-            <Alert>
+            <Alert className="border-red-500 bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-50 dark:border-red-900">
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
           
-          <button 
+          <form onSubmit={handleEmailAuth} className="space-y-4">
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+                disabled={loading}
+              />
+            </div>
+            
+            <div className="space-y-2">
+              <Label htmlFor="password">Password</Label>
+              <Input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter your password"
+                required
+                disabled={loading}
+              />
+            </div>
+            
+            {isSignUp && (
+              <div className="space-y-2">
+                <Label htmlFor="confirmPassword">Confirm Password</Label>
+                <Input
+                  id="confirmPassword"
+                  type="password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  placeholder="Confirm your password"
+                  required
+                  disabled={loading}
+                />
+              </div>
+            )}
+            
+            <Button 
+              type="submit"
+              disabled={loading}
+              className="w-full"
+              size="lg"
+            >
+              {loading ? 'Please wait...' : (isSignUp ? 'Sign Up' : 'Sign In')}
+            </Button>
+          </form>
+          
+          <div className="text-center">
+            <button
+              type="button"
+              onClick={() => setIsSignUp(!isSignUp)}
+              className="text-sm text-blue-600 hover:text-blue-800 underline"
+              disabled={loading}
+            >
+              {isSignUp ? 'Already have an account? Sign in' : "Don't have an account? Sign up"}
+            </button>
+          </div>
+          
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-2 bg-white dark:bg-[#1e2124] text-gray-500">Or continue with</span>
+            </div>
+          </div>
+          
+          <Button 
             onClick={handleGoogleLogin}
             disabled={loading}
-            className="w-full inline-flex items-center justify-center min-h-[44px] bg-white hover:bg-gray-50 text-gray-700 dark:text-white border border-gray-300 text-sm font-medium no-underline rounded transition-colors disabled:opacity-50"
+            className="w-full bg-white hover:bg-gray-50 text-gray-700 dark:text-white border border-gray-300"
+            size="lg"
           >
             <div className="mr-2 p-1 min-h-[30px] flex items-center">
-              <svg height="18" viewBox="0 0 24 24" width="18" className="fill-white">
+              <svg height="18" viewBox="0 0 24 24" width="18">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                 <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
@@ -82,12 +215,14 @@ function Login() {
               </svg>
             </div>
             <div>{loading ? 'Signing in...' : 'Sign in with Google'}</div>
-          </button>
+          </Button>
           
-          <button 
+          <Button 
             onClick={handleGitHubLogin}
             disabled={loading}
-            className="w-full inline-flex items-center justify-center min-h-[44px] bg-[#24292e] hover:bg-[#1b1f23] text-gray-700 dark:text-white text-sm font-medium no-underline rounded transition-colors disabled:opacity-50"
+            className="w-full bg-[#1A1A1A] hover:bg-[#1b1f23] text-white"
+            size="lg"
+            style={{ backgroundColor: '#1A1A1A' }}
           >
             <div className="mr-2 p-1 min-h-[30px] flex items-center">
               <svg height="18" viewBox="0 0 16 16" width="18" className="fill-white">
@@ -104,7 +239,7 @@ function Login() {
               </svg>
             </div>
             <div>{loading ? 'Signing in...' : 'Sign in with GitHub'}</div>
-          </button>
+          </Button>
           
           <div className="text-center text-sm text-gray-500 dark:text-gray-400">
             Secure authentication powered by Supabase
