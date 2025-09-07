@@ -10,11 +10,13 @@ import Settings from "./components/Settings";
 import Transactions from "./components/Transactions"
 import About from "./components/About";
 import Login from "./components/Login";
+import Landing from "./components/Landing";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 
 const router = createBrowserRouter([
-  {path: "/", element: <ProtectedRoute><App /></ProtectedRoute>},
+  {path: "/", element: <Landing />},
+  {path: "/app", element: <ProtectedRoute><App /></ProtectedRoute>},
   {path: "/login", element: <Login />},
   {path: "/dashboard", element: <ProtectedRoute><Dashboard /></ProtectedRoute>},
   {path: "/about", element: <ProtectedRoute><About /></ProtectedRoute>},

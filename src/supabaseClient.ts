@@ -8,6 +8,7 @@ export const supabase = createClient(PROJECT_URL, ANON_KEY)
 
 // Get all transactions
 export async function getAllTransactions(userId: string | null = null): Promise<Transaction[]> {
+  console.log('getAllTransactions called with userId:', userId);
   let query = supabase
     .from('transactions')
     .select('*')
@@ -18,12 +19,16 @@ export async function getAllTransactions(userId: string | null = null): Promise<
   }
   
   const { data, error } = await query
+  console.log('getAllTransactions result:', { data: data?.length, error });
   
   if (error) {
     throw new Error(`Failed to fetch transactions: ${error.message}`)
   }
   
-  return data as Transaction[]
+  return (data || []).map(transaction => ({
+    ...transaction,
+    amount: Number(transaction.amount)
+  })) as Transaction[]
 }
 
 // Get spending by category
@@ -43,7 +48,10 @@ export async function getSpendingByCategory(userId: string | null = null) {
     throw new Error(`Failed to fetch spending by category: ${error.message}`)
   }
   
-  return data
+  return (data || []).map(item => ({
+    ...item,
+    amount: Number(item.amount)
+  }))
 }
 
 // Add a new transaction

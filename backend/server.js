@@ -27,11 +27,47 @@ const configuration = new Configuration({
 
 const plaidClient = new PlaidApi(configuration);
 
-// Supabase client (for user verification if needed)
+// Supabase client (for user verification)
 const supabase = createClient(
   process.env.VITE_SUPABASE_URL,
   process.env.VITE_SUPABASE_ANON_KEY
 );
+
+// Authentication middleware
+const authenticateUser = async (req, res, next) => {
+  try {
+    // Check if we're in test mode
+    if (process.env.TEST_MODE === 'true') {
+      // In test mode, create a mock user object
+      req.user = {
+        id: process.env.TEST_USER_ID,
+        email: 'test@example.com'
+      };
+      return next();
+    }
+
+    // Normal authentication flow
+    const authHeader = req.headers.authorization;
+    
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: 'Missing or invalid authorization header' });
+    }
+
+    const token = authHeader.substring(7); // Remove 'Bearer ' prefix
+    
+    const { data: { user }, error } = await supabase.auth.getUser(token);
+    
+    if (error || !user) {
+      return res.status(401).json({ error: 'Invalid token' });
+    }
+    
+    req.user = user;
+    next();
+  } catch (error) {
+    console.error('Authentication error:', error);
+    res.status(401).json({ error: 'Authentication failed' });
+  }
+};
 
 // Routes
 
@@ -41,7 +77,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Create link token
-app.post('/api/plaid/create-link-token', async (req, res) => {
+app.post('/api/plaid/create-link-token', authenticateUser, async (req, res) => {
   try {
     const { userId } = req.body;
     
@@ -72,7 +108,7 @@ app.post('/api/plaid/create-link-token', async (req, res) => {
 });
 
 // Exchange public token for access token
-app.post('/api/plaid/exchange-token', async (req, res) => {
+app.post('/api/plaid/exchange-token', authenticateUser, async (req, res) => {
   try {
     const { public_token } = req.body;
     
@@ -102,7 +138,7 @@ app.post('/api/plaid/exchange-token', async (req, res) => {
 });
 
 // Sync transactions
-app.post('/api/plaid/sync-transactions', async (req, res) => {
+app.post('/api/plaid/sync-transactions', authenticateUser, async (req, res) => {
   try {
     const { access_token, start_date, end_date } = req.body;
     
@@ -134,7 +170,7 @@ app.post('/api/plaid/sync-transactions', async (req, res) => {
 });
 
 // Get account info
-app.post('/api/plaid/accounts', async (req, res) => {
+app.post('/api/plaid/accounts', authenticateUser, async (req, res) => {
   try {
     const { access_token } = req.body;
     
