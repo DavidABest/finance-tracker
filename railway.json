@@ -4,7 +4,7 @@
     "builder": "nixpacks"
   },
   "deploy": {
-    "startCommand": "npm run build && cd backend && npm start",
+    "startCommand": "npm run build && cd backend && npm install && npm start",
     "healthcheckPath": "/api/health"
   }
 }
