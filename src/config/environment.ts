@@ -1,7 +1,7 @@
 // Environment configuration
 export const config = {
   // API endpoints
-  API_BASE_URL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api',
+  API_BASE_URL: import.meta.env.VITE_API_BASE_URL || '/api',
   
   // Supabase
   SUPABASE_URL: import.meta.env.VITE_SUPABASE_URL || '',

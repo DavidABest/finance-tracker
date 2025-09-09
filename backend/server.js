@@ -151,10 +151,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Plaid configuration
 const configuration = new Configuration({
-  basePath: PlaidEnvironments[process.env.VITE_PLAID_ENV],
+  basePath: PlaidEnvironments[process.env.PLAID_ENV],
   baseOptions: {
     headers: {
-      'PLAID-CLIENT-ID': process.env.VITE_PLAID_CLIENT_ID,
+      'PLAID-CLIENT-ID': process.env.PLAID_CLIENT_ID,
       'PLAID-SECRET': process.env.PLAID_SECRET,
     },
   },
@@ -431,5 +431,5 @@ app.post('/api/plaid/accounts', plaidLimiter, authenticateUser, async (req, res)
 app.listen(PORT, HOST, () => {
   console.log(`✅ Server listening on http://${HOST}:${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`Plaid environment: ${process.env.VITE_PLAID_ENV}`);
+  console.log(`Plaid environment: ${process.env.PLAID_ENV}`);
 });
