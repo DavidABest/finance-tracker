@@ -9,6 +9,7 @@ import { Alert, AlertDescription } from "./ui/alert"
 import { getAllTransactions, getSpendingByCategory } from '../supabaseClient';
 import { useAuth } from '../contexts/AuthContext';
 import { Transaction } from '../types';
+import { logger } from '../config/environment';
 import { PieChart, Pie, Cell, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, BarChart, Bar, Legend } from 'recharts';
 // import { lazy, Suspense } from 'react';
 
@@ -30,13 +31,13 @@ function Dashboard() {
         try {
             setLoading(true);
             setError(null);
-            console.log('Dashboard: Fetching data for user:', user?.id);
+            logger.log('Dashboard: Fetching data for user:', user?.id);
             const [transactionsData, spendingData] = await Promise.all([
                 getAllTransactions(user?.id || null),
                 getSpendingByCategory(user?.id || null)
             ]);
-            console.log('Dashboard: Got transactions:', transactionsData.length);
-            console.log('Dashboard: Got spending data:', spendingData.length);
+            logger.log('Dashboard: Got transactions:', transactionsData.length);
+            logger.log('Dashboard: Got spending data:', spendingData.length);
             setTransactions(transactionsData);
             setSpendingByCategory(spendingData);
         } catch (err) {

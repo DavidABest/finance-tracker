@@ -1,14 +1,30 @@
 import { createClient } from '@supabase/supabase-js'
-import { Transaction } from './types'
+import { Transaction } from './types/index'
+import { demoDataService } from './services/demoDataService'
+import { logger } from './config/environment'
 
 const PROJECT_URL = import.meta.env.VITE_SUPABASE_URL
 const ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 export const supabase = createClient(PROJECT_URL, ANON_KEY)
 
+// Check if in demo mode
+function isDemoMode(): boolean {
+  return localStorage.getItem('demoMode') === 'true';
+}
+
 // Get all transactions
 export async function getAllTransactions(userId: string | null = null): Promise<Transaction[]> {
-  console.log('getAllTransactions called with userId:', userId);
+  logger.log('getAllTransactions called with userId:', userId);
+  
+  // Return demo data if in demo mode
+  if (isDemoMode()) {
+    logger.log('Demo mode active - returning demo transactions');
+    const demoTransactions = demoDataService.getDemoTransactions();
+    // Sort by date descending to match expected order
+    return demoTransactions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  }
+  
   let query = supabase
     .from('transactions')
     .select('*')
@@ -19,7 +35,7 @@ export async function getAllTransactions(userId: string | null = null): Promise<
   }
   
   const { data, error } = await query
-  console.log('getAllTransactions result:', { data: data?.length, error });
+  logger.log('getAllTransactions result:', { data: data?.length, error });
   
   if (error) {
     throw new Error(`Failed to fetch transactions: ${error.message}`)
@@ -33,6 +49,16 @@ export async function getAllTransactions(userId: string | null = null): Promise<
 
 // Get spending by category
 export async function getSpendingByCategory(userId: string | null = null) {
+  // Return demo data if in demo mode
+  if (isDemoMode()) {
+    logger.log('Demo mode active - returning demo spending data');
+    const categorySpending = demoDataService.getCategorySpending();
+    return Object.entries(categorySpending).map(([category, amount]) => ({
+      category,
+      amount: Number(amount)
+    }));
+  }
+  
   let query = supabase
     .from('transactions')
     .select('category, amount')

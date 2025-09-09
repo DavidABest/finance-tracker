@@ -7,6 +7,7 @@ import { Button } from "./ui/button"
 import { useState, useEffect } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import { savePlaidTransactionsToSupabase } from "../services/plaidService"
+import { config, logger } from "../config/environment"
 
 interface BankAccount {
   id: string;
@@ -37,8 +38,10 @@ function Settings() {
                 throw new Error('No authentication token available');
             }
 
+            logger.log('Plaid success - exchanging public token:', publicToken);
+
             // Exchange public token for access token
-            const exchangeResponse = await fetch('http://localhost:3001/api/plaid/exchange-token', {
+            const exchangeResponse = await fetch(`${config.API_BASE_URL}/plaid/exchange-token`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,13 +53,17 @@ function Settings() {
             });
 
             if (!exchangeResponse.ok) {
-                throw new Error('Failed to exchange token');
+                const errorData = await exchangeResponse.text();
+                logger.error('Exchange token error:', errorData);
+                throw new Error(`Failed to exchange token: ${exchangeResponse.status}`);
             }
 
             const { accessToken, itemId } = await exchangeResponse.json();
+            logger.log('Token exchange successful, access token received');
             
             // Fetch account information
-            const accountsResponse = await fetch('http://localhost:3001/api/plaid/accounts', {
+            setMessage('Fetching account information...');
+            const accountsResponse = await fetch(`${config.API_BASE_URL}/plaid/accounts`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -68,17 +75,24 @@ function Settings() {
             });
 
             if (!accountsResponse.ok) {
-                throw new Error('Failed to fetch accounts');
+                const errorData = await accountsResponse.text();
+                logger.error('Accounts fetch error:', errorData);
+                throw new Error(`Failed to fetch accounts: ${accountsResponse.status}`);
             }
 
             const { accounts: newAccounts } = await accountsResponse.json();
+            logger.log('Accounts fetched successfully:', newAccounts.length);
+            
             setAccounts(prev => [...prev, ...newAccounts]);
             setAccessTokens(prev => [...prev, accessToken]);
-            setMessage('Bank account connected successfully!');
+            
+            // Auto-sync transactions after successful account connection
+            setMessage('Syncing recent transactions...');
+            await syncTransactionsForToken(accessToken);
 
         } catch (error) {
-            console.error('Error handling Plaid success:', error);
-            setMessage('Failed to connect bank account. Please try again.');
+            logger.error('Error handling Plaid success:', error);
+            setMessage(`Failed to connect bank account: ${error instanceof Error ? error.message : 'Unknown error'}`);
         } finally {
             setLoading(false);
         }
@@ -86,26 +100,27 @@ function Settings() {
 
     const handlePlaidExit = (error: any, metadata: any) => {
         if (error) {
-            console.error('Plaid Link error:', error);
+            logger.error('Plaid Link error:', error);
             setMessage('Bank connection was cancelled or failed.');
         }
     };
 
-    const syncTransactions = async (accessToken: string) => {
+    const syncTransactionsForToken = async (accessToken: string) => {
         try {
-            setLoading(true);
-            setMessage('Syncing transactions...');
-
             const authToken = getAuthToken();
             if (!authToken) {
                 throw new Error('No authentication token available');
             }
 
-            // Get transactions from the last 30 days
+            // Get transactions from the last 90 days for initial sync
             const endDate = new Date().toISOString().split('T')[0];
-            const startDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+            const startDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
-            const response = await fetch('http://localhost:3001/api/plaid/sync-transactions', {
+            logger.log('Syncing transactions from', startDate, 'to', endDate);
+            logger.log('Using access token:', accessToken.substring(0, 10) + '...');
+            logger.log('Using auth token:', authToken.substring(0, 20) + '...');
+
+            const response = await fetch(`${config.API_BASE_URL}/plaid/sync-transactions`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -118,21 +133,48 @@ function Settings() {
                 }),
             });
 
+            logger.log('Sync response status:', response.status);
+
             if (!response.ok) {
-                throw new Error('Failed to sync transactions');
+                const errorData = await response.text();
+                logger.error('Transaction sync error response:', errorData);
+                throw new Error(`Failed to sync transactions: ${response.status} - ${errorData}`);
             }
 
-            const { transactions } = await response.json();
+            const responseData = await response.json();
+            logger.log('Sync response data:', responseData);
+            
+            const { transactions } = responseData;
+            logger.log('Transactions synced from Plaid:', transactions?.length || 0);
             
             // Save transactions to Supabase
-            if (user && transactions.length > 0) {
-                await savePlaidTransactionsToSupabase(transactions, user.id);
+            if (user && transactions && transactions.length > 0) {
+                logger.log('Saving transactions to Supabase...');
+                const result = await savePlaidTransactionsToSupabase(transactions, user.id, authToken);
+                logger.log('Transactions saved to Supabase successfully:', result);
             }
             
-            setMessage(`Successfully synced ${transactions.length} transactions!`);
+            setMessage(`Successfully connected and synced ${transactions?.length || 0} transactions!`);
 
         } catch (error) {
-            console.error('Error syncing transactions:', error);
+            logger.error('Error syncing transactions - full error:', error);
+            logger.error('Error type:', typeof error);
+            logger.error('Error constructor:', error?.constructor?.name);
+            if (error instanceof Error) {
+                logger.error('Error message:', error.message);
+                logger.error('Error stack:', error.stack);
+            }
+            setMessage(`Bank connected but failed to sync transactions: ${error instanceof Error ? error.message : JSON.stringify(error)}`);
+        }
+    };
+
+    const syncTransactions = async (accessToken: string) => {
+        try {
+            setLoading(true);
+            setMessage('Syncing transactions...');
+            await syncTransactionsForToken(accessToken);
+        } catch (error) {
+            logger.error('Error syncing transactions:', error);
             setMessage('Failed to sync transactions. Please try again.');
         } finally {
             setLoading(false);

@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import Sidebar from "./Sidebar";
 import { getAllTransactions } from '../supabaseClient';
+import { useAuth } from '../contexts/AuthContext';
 import { Transaction } from '../types';
 
 function Transactions() {
+    const { user } = useAuth();
     const [transactions, setTransactions] = useState<Transaction[]>([]);
     const [filteredTransactions, setFilteredTransactions] = useState<Transaction[]>([]);
     const [loading, setLoading] = useState(true);
@@ -13,14 +15,16 @@ function Transactions() {
     const [typeFilter, setTypeFilter] = useState('all');
 
     useEffect(() => {
-        fetchTransactions();
-    }, []);
+        if (user) {
+            fetchTransactions();
+        }
+    }, [user]);
 
     const fetchTransactions = async () => {
         try {
             setLoading(true);
             setError(null);
-            const data = await getAllTransactions();
+            const data = await getAllTransactions(user?.id || null);
             setTransactions(data);
             setFilteredTransactions(data);
         } catch (err) {

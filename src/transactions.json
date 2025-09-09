@@ -2189,6 +2189,146 @@
       "category": "Food",
       "subcategory": "Dining Out",
       "account_id": "checking_001"
+    },
+    {
+      "id": 220,
+      "date": "2025-08-19",
+      "description": "GAS STATION - EXXON",
+      "amount": -53.45,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 221,
+      "date": "2025-08-21",
+      "description": "GROCERY STORE - FOOD LION",
+      "amount": -98.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 222,
+      "date": "2025-08-23",
+      "description": "STREAMING - SPOTIFY",
+      "amount": -9.99,
+      "type": "debit",
+      "category": "Entertainment",
+      "subcategory": "Streaming",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 223,
+      "date": "2025-08-25",
+      "description": "RESTAURANT - BURGER KING",
+      "amount": -14.78,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 224,
+      "date": "2025-08-27",
+      "description": "BACK TO SCHOOL SUPPLIES - TARGET",
+      "amount": -87.45,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Retail",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 225,
+      "date": "2025-08-29",
+      "description": "DEPARTMENT STORE - WALMART",
+      "amount": -65.89,
+      "type": "debit",
+      "category": "Shopping",
+      "subcategory": "Retail",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 226,
+      "date": "2025-08-31",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 3600.00,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 227,
+      "date": "2025-09-01",
+      "description": "RENT PAYMENT - DOWNTOWN APTS",
+      "amount": -1850.00,
+      "type": "debit",
+      "category": "Housing",
+      "subcategory": "Rent",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 228,
+      "date": "2025-09-02",
+      "description": "LABOR DAY BBQ SUPPLIES",
+      "amount": -76.34,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 229,
+      "date": "2025-09-03",
+      "description": "GROCERY STORE - HARRIS TEETER",
+      "amount": -112.45,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 230,
+      "date": "2025-09-04",
+      "description": "GAS STATION - BP",
+      "amount": -49.78,
+      "type": "debit",
+      "category": "Transportation",
+      "subcategory": "Fuel",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 231,
+      "date": "2025-09-05",
+      "description": "ELECTRIC BILL - CITY POWER",
+      "amount": -134.56,
+      "type": "debit",
+      "category": "Utilities",
+      "subcategory": "Electricity",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 232,
+      "date": "2025-09-06",
+      "description": "COFFEE SHOP - STARBUCKS",
+      "amount": -9.25,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Dining Out",
+      "account_id": "checking_001"
+    },
+    {
+      "id": 233,
+      "date": "2025-09-07",
+      "description": "GROCERY STORE - KROGER",
+      "amount": -89.67,
+      "type": "debit",
+      "category": "Food",
+      "subcategory": "Groceries",
+      "account_id": "checking_001"
     }
   ]
 }

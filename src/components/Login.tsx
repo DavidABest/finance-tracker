@@ -5,6 +5,7 @@ import { Alert, AlertDescription } from './ui/alert';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { supabase } from '../supabaseClient';
+import { logger } from '../config/environment';
 
 function Login() {
   const [loading, setLoading] = useState(false);
@@ -79,10 +80,10 @@ function Login() {
           }
         });
         
-        console.log('Sign up response:', { data, error });
+        logger.log('Sign up response:', { data, error });
         
         if (error) {
-          console.error('Sign up error:', error);
+          logger.error('Sign up error:', error);
           throw error;
         }
         
@@ -96,10 +97,10 @@ function Login() {
           password
         });
         
-        console.log('Sign in response:', { data, error });
+        logger.log('Sign in response:', { data, error });
         
         if (error) {
-          console.error('Sign in error:', error);
+          logger.error('Sign in error:', error);
           throw error;
         }
       }

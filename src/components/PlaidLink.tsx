@@ -2,6 +2,7 @@ import { usePlaidLink } from 'react-plaid-link';
 import { Button } from './ui/button';
 import { useAuth } from '../contexts/AuthContext';
 import { useState } from 'react';
+import { config, logger } from '../config/environment';
 
 interface PlaidLinkProps {
   onSuccess: (publicToken: string, metadata: any) => void;
@@ -18,13 +19,13 @@ function PlaidLink({ onSuccess, onExit }: PlaidLinkProps) {
 
     const authToken = getAuthToken();
     if (!authToken) {
-      console.error('No auth token available');
+      logger.error('No auth token available');
       return;
     }
 
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/api/plaid/create-link-token', {
+      const response = await fetch(`${config.API_BASE_URL}/plaid/create-link-token`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -42,7 +43,7 @@ function PlaidLink({ onSuccess, onExit }: PlaidLinkProps) {
       const data = await response.json();
       setLinkToken(data.link_token);
     } catch (error) {
-      console.error('Error creating link token:', error);
+      logger.error('Error creating link token:', error);
     } finally {
       setLoading(false);
     }

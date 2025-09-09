@@ -1,7 +1,21 @@
 // Client-side Plaid service - only handles operations that don't require secret key
+import { supabase } from '../supabaseClient';
+import { Transaction } from '../types';
+import { config, logger } from '../config/environment';
 
 export interface PlaidLinkToken {
   link_token: string;
+}
+
+export interface PlaidTransaction {
+  transaction_id: string;
+  account_id: string;
+  amount: number;
+  date: string;
+  name: string;
+  merchant_name?: string;
+  category: string[];
+  account_owner: string | null;
 }
 
 export interface PlaidPublicTokenExchange {
@@ -10,7 +24,7 @@ export interface PlaidPublicTokenExchange {
 
 // Client-side service calls to your backend API
 export class PlaidService {
-  private static baseUrl = 'http://localhost:3001/api'; // Express backend API
+  private static baseUrl = config.API_BASE_URL;
 
   // Create link token (calls your backend)
   static async createLinkToken(userId: string): Promise<string> {
@@ -66,6 +80,43 @@ export class PlaidService {
     }
 
     return await response.json();
+  }
+}
+
+// Save Plaid transactions to Supabase via backend
+export async function savePlaidTransactionsToSupabase(
+  plaidTransactions: PlaidTransaction[],
+  userId: string,
+  authToken: string
+): Promise<{ success: boolean; count: number }> {
+  try {
+    logger.log('Saving transactions through backend API...');
+    
+    const response = await fetch(`${config.API_BASE_URL}/plaid/save-transactions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${authToken}`,
+      },
+      body: JSON.stringify({
+        transactions: plaidTransactions,
+        userId: userId,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      logger.error('Backend save error:', errorData);
+      throw new Error(`Failed to save transactions: ${response.status} - ${errorData}`);
+    }
+
+    const result = await response.json();
+    logger.log('Transactions saved successfully via backend:', result);
+    return result;
+
+  } catch (error) {
+    logger.error('Failed to save Plaid transactions via backend:', error);
+    throw error;
   }
 }
 
