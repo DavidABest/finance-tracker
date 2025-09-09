@@ -1,24 +1,26 @@
-# Personal Finance Tracker
+# Clarity Finance Tracker
 
-A modern web application for analyzing personal financial data and spending patterns. Import your bank transaction history and gain insights into your financial habits through interactive visualizations and filtering tools.
+A personal finance management application built with modern web technologies. Features enterprise-level security, real banking integration via Plaid API, and comprehensive financial data visualization.
 
 ## Features
 
-- **Transaction Management**: Import and view bank transaction history
-- **Smart Filtering**: Search transactions by description, category, or amount
-- **Category Analysis**: Automatic categorization with color-coded displays
-- **Responsive Design**: Clean, mobile-friendly interface
-- **Real-time Search**: Instant filtering as you type
-- **Secure Data Storage**: Supabase backend with environment-based configuration
+- **Real Banking Integration**: Secure connection to 11,000+ financial institutions via Plaid API
+- **Enterprise Security**: Rate limiting, Helmet.js security headers, CORS protection, JWT authentication
+- **Interactive Dashboard**: Comprehensive spending analysis with charts and visualizations
+- **Transaction Management**: Advanced filtering, searching, and categorization
+- **Dark Mode Support**: Fully responsive design with theme switching
+- **Production Ready**: Environment-aware configuration, comprehensive logging, deployment automation
 
 ## Tech Stack
 
-- **Frontend**: React 19 with Vite
-- **Styling**: TailwindCSS v4
-- **Database**: Supabase (PostgreSQL)
-- **Charts**: Recharts (planned)
-- **Icons**: Lucide React & Font Awesome
-- **Routing**: React Router DOM
+- **Frontend**: React + TypeScript, Vite build system
+- **UI Library**: shadcn/ui components with Tailwind CSS
+- **Backend**: Node.js + Express.js with comprehensive middleware
+- **Database**: Supabase (PostgreSQL) with Row Level Security
+- **Financial Data**: Plaid API integration
+- **Security**: Rate limiting, CORS, Helmet.js headers
+- **Deployment**: Railway full-stack hosting
+- **Charts**: Recharts for data visualization
 
 ## Getting Started
 
@@ -45,10 +47,14 @@ npm install
 ```bash
 cp .env.example .env
 ```
-Add your Supabase credentials:
+Add your configuration:
 ```
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+PLAID_CLIENT_ID=your_plaid_client_id
+PLAID_SECRET=your_plaid_secret
+PLAID_ENV=sandbox
+JWT_SECRET=your_jwt_secret
 ```
 
 4. Start the development server
@@ -87,15 +93,25 @@ CREATE TABLE transactions (
 );
 ```
 
-## Roadmap
+## Current Status
 
-- [ ] Plaid integration for automatic bank data import
-- [ ] Dashboard with spending insights and charts
-- [ ] Monthly/yearly spending reports
-- [ ] Budget tracking and alerts
-- [ ] Export functionality (PDF, CSV)
-- [ ] Multi-account support
-- [ ] Mobile app (React Native)
+✅ **Completed Features**
+- Full-stack application with React + TypeScript frontend
+- Express.js backend with comprehensive security middleware
+- Plaid API integration for real banking data
+- Interactive dashboard with spending visualizations
+- Enterprise-level security (rate limiting, CORS, security headers)
+- Dark mode support with consistent theming
+- Railway deployment with production configuration
+
+🚀 **Future Enhancements**
+- Machine learning for spending insights and predictions
+- Real-time WebSocket notifications for account changes
+- Progressive Web App (PWA) capabilities
+- Investment portfolio tracking integration
+- Budget optimization algorithms
+- Multi-currency support for international accounts
+- Microservices architecture scaling
 
 ## Contributing
 
