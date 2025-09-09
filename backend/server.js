@@ -16,6 +16,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+const HOST = '0.0.0.0';
 
 // Security middleware
 app.use(helmet({
@@ -427,8 +428,8 @@ app.post('/api/plaid/accounts', plaidLimiter, authenticateUser, async (req, res)
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Clarity Finance Backend running on port ${PORT}`);
+app.listen(PORT, HOST, () => {
+  console.log(`✅ Server listening on http://${HOST}:${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Plaid environment: ${process.env.VITE_PLAID_ENV}`);
 });
