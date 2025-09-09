@@ -120,8 +120,8 @@ export async function savePlaidTransactionsToSupabase(
   }
 }
 
-// Plaid Link configuration (client-side safe)
+// Plaid Link configuration - credentials handled by backend only
 export const plaidConfig = {
-  clientId: import.meta.env.VITE_PLAID_CLIENT_ID,
-  env: import.meta.env.VITE_PLAID_ENV,
+  // Client ID and secrets are handled securely by the backend
+  // Frontend only needs to call backend endpoints
 };

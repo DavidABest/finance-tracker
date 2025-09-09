@@ -7,9 +7,7 @@ export const config = {
   SUPABASE_URL: import.meta.env.VITE_SUPABASE_URL || '',
   SUPABASE_ANON_KEY: import.meta.env.VITE_SUPABASE_ANON_KEY || '',
   
-  // Plaid
-  PLAID_CLIENT_ID: import.meta.env.VITE_PLAID_CLIENT_ID || '',
-  PLAID_ENV: import.meta.env.VITE_PLAID_ENV || 'sandbox',
+  // Plaid credentials are handled by backend only - frontend calls backend endpoints
   
   // App settings
   isDevelopment: import.meta.env.DEV,
