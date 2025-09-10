@@ -8,7 +8,12 @@ function Landing() {
 
   const handleDemoMode = () => {
     localStorage.setItem('demoMode', 'true');
-    navigate('/dashboard');
+    // Trigger custom event to notify AuthContext of the change
+    window.dispatchEvent(new CustomEvent('demoModeChange'));
+    // Small delay to ensure AuthContext picks up the change
+    setTimeout(() => {
+      navigate('/dashboard');
+    }, 100);
   };
 
   const handleLogin = () => {

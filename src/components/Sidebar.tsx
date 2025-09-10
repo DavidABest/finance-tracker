@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import { FaHome, FaMoneyCheckAlt, FaCog, FaInfoCircle, FaSignOutAlt } from 'react-icons/fa';
 import { useAuth } from '../contexts/AuthContext';
 import { logger } from '../config/environment';
+import { useNavigate } from 'react-router-dom';
 
 function Sidebar() {
-  const { signOut } = useAuth();
+  const { signOut, user, isDemoMode } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     try {
@@ -13,6 +15,10 @@ function Sidebar() {
     } catch (error) {
       logger.error('Error signing out:', error);
     }
+  };
+
+  const handleHomeClick = () => {
+    navigate('/');
   };
 
   return (
@@ -46,9 +52,18 @@ function Sidebar() {
       </ul>
       
       <div className="mb-4">
-        <button onClick={handleLogout} className="w-full !bg-transparent !border-0 !p-0 appearance-none focus:outline-none !shadow-none">
-          <SideBarIcon icon={<FaSignOutAlt size="28" />} text="Logout" />
-        </button>
+        {user || isDemoMode ? (
+          <button onClick={handleLogout} className="w-full !bg-transparent !border-0 !p-0 appearance-none focus:outline-none !shadow-none">
+            <SideBarIcon 
+              icon={isDemoMode ? <FaHome size="28" /> : <FaSignOutAlt size="28" />} 
+              text={isDemoMode ? "Home" : "Logout"} 
+            />
+          </button>
+        ) : (
+          <button onClick={handleHomeClick} className="w-full !bg-transparent !border-0 !p-0 appearance-none focus:outline-none !shadow-none">
+            <SideBarIcon icon={<FaHome size="28" />} text="Home" />
+          </button>
+        )}
       </div>
     </div>
   );

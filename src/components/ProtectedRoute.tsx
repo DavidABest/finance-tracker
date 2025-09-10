@@ -18,7 +18,7 @@ function ProtectedRoute({ children }: ProtectedRouteProps) {
 
   // Allow access if user exists OR if in demo mode
   if (!user && !isDemoMode) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return <>{children}</>;

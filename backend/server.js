@@ -8,11 +8,8 @@ const { Configuration, PlaidApi, PlaidEnvironments } = require('plaid');
 const { createClient } = require('@supabase/supabase-js');
 
 // Load environment variables
-// In production (Railway), environment variables are automatically available
-// In development, load from ../.env
-if (process.env.NODE_ENV !== 'production') {
-  dotenv.config({ path: '../.env' });
-}
+// Always load from ../.env for local development
+dotenv.config({ path: '../.env' });
 
 const app = express();
 const PORT = process.env.PORT || 3001;
