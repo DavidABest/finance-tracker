@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const rateLimit = require('express-rate-limit');
 const slowDown = require('express-slow-down');
 const helmet = require('helmet');
+const path = require('path');
 const { Configuration, PlaidApi, PlaidEnvironments } = require('plaid');
 const { createClient } = require('@supabase/supabase-js');
 
@@ -424,9 +425,19 @@ app.post('/api/plaid/accounts', plaidLimiter, authenticateUser, async (req, res)
   }
 });
 
+// Serve static files from React build
+const distPath = path.join(__dirname, '..', 'dist');
+app.use(express.static(distPath));
+
+// Catch-all for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
+});
+
 // Start server
 app.listen(PORT, HOST, () => {
   console.log(`✅ Server listening on http://${HOST}:${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`Plaid environment: ${process.env.PLAID_ENV}`);
+  console.log(`Serving static files from: ${distPath}`);
 });

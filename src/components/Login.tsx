@@ -88,7 +88,7 @@ function Login() {
         }
         
         if (data?.user && !data.user.email_confirmed_at) {
-          setError('Check your email to confirm your account');
+          setError('Account created! Please check your email to confirm your account before signing in.');
         }
       }
       else {
@@ -106,7 +106,20 @@ function Login() {
       }
     }
     catch (error) {
-      setError(error instanceof Error ? error.message : 'An error occurred');
+      const errorMessage = error instanceof Error ? error.message : 'An error occurred';
+      
+      // Improve error messages for better UX
+      if (errorMessage.includes('User already registered')) {
+        setError('If an account with this email exists, please check your email to confirm your account or try signing in instead.');
+      } else if (errorMessage.includes('Password should be at least')) {
+        setError('Password must be at least 6 characters long and contain a mix of letters, numbers, and special characters.');
+      } else if (errorMessage.includes('Unable to validate email address')) {
+        setError('Please enter a valid email address.');
+      } else if (errorMessage.includes('Invalid login credentials')) {
+        setError('Incorrect email or password. Please try again.');
+      } else {
+        setError(errorMessage);
+      }
     }
     finally {
       setLoading(false);
