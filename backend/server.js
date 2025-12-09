@@ -425,12 +425,12 @@ app.post('/api/plaid/accounts', plaidLimiter, authenticateUser, async (req, res)
   }
 });
 
-// Serve static files from React build
+// Serve frontend static files
 const distPath = path.join(__dirname, '..', 'dist');
 app.use(express.static(distPath));
 
-// Catch-all for React Router
-app.get('*', (req, res) => {
+// Fallback to index.html
+app.use((req, res) => {
   res.sendFile(path.join(distPath, 'index.html'));
 });
 
