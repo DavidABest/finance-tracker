@@ -18,13 +18,14 @@ const HOST = '0.0.0.0';
 
 // Security middleware
 app.use(helmet({
-  crossOriginEmbedderPolicy: false, // Allow embedding for development
+  crossOriginEmbedderPolicy: false,
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'"],
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", "data:", "https:"],
+      connectSrc: ["'self'", "https://*.supabase.co", "https://accounts.google.com"],
     }
   }
 }));
