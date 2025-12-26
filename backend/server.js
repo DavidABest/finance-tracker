@@ -28,6 +28,7 @@ app.use(helmet({
       styleSrc: ["'self'", "'unsafe-inline'"],
       scriptSrc: ["'self'", "https://cdn.plaid.com"],
       imgSrc: ["'self'", "data:", "https:"],
+      frameSrc: ["https://cdn.plaid.com"],
       connectSrc: ["'self'", "https://*.supabase.co", "https://accounts.google.com", "https://*.plaid.com"],
     }
   }

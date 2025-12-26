@@ -255,8 +255,9 @@ function Login() {
             <div>{loading ? 'Signing in...' : 'Sign in with GitHub'}</div>
           </Button>
           
-          <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-            Secure authentication powered by Supabase
+          <div className="text-center text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <div>Secure authentication powered by Supabase</div>
+            <div className="text-xs">Portfolio demo • Uses Plaid sandbox for demonstration</div>
           </div>
         </CardContent>
       </Card>

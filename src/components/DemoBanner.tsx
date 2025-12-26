@@ -22,7 +22,7 @@ function DemoBanner() {
           🎬 DEMO MODE
         </Badge>
         <span className="flex-1 min-w-0">
-          You're viewing a live demo with sample data. All features work including real Plaid APIs.
+          Portfolio demo using sample data and Plaid sandbox environment. All features functional.
         </span>
         <Button 
           variant="outline" 

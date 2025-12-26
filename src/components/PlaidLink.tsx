@@ -70,13 +70,18 @@ function PlaidLink({ onSuccess, onExit }: PlaidLinkProps) {
   };
 
   return (
-    <Button 
-      onClick={handleConnect}
-      disabled={loading || !user}
-      className="w-full"
-    >
-      {loading ? 'Preparing...' : 'Connect Bank Account'}
-    </Button>
+    <div className="space-y-2">
+      <Button
+        onClick={handleConnect}
+        disabled={loading || !user}
+        className="w-full"
+      >
+        {loading ? 'Preparing...' : 'Connect Bank Account'}
+      </Button>
+      <p className="text-xs text-center text-gray-500 dark:text-gray-400">
+        Demo mode: Uses Plaid sandbox with test bank data
+      </p>
+    </div>
   );
 }
 
