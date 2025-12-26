@@ -16,6 +16,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const HOST = '0.0.0.0';
 
+// Trust proxy - required for Railway/production deployment
+app.set('trust proxy', true);
+
 // Security middleware
 app.use(helmet({
   crossOriginEmbedderPolicy: false,
