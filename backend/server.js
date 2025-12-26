@@ -23,9 +23,9 @@ app.use(helmet({
     directives: {
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'"],
-      scriptSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://cdn.plaid.com"],
       imgSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'", "https://*.supabase.co", "https://accounts.google.com"],
+      connectSrc: ["'self'", "https://*.supabase.co", "https://accounts.google.com", "https://*.plaid.com"],
     }
   }
 }));
