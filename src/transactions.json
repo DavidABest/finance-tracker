@@ -2979,6 +2979,16 @@
       "category": "Shopping",
       "subcategory": "Clothing",
       "account_id": "checking_001"
+    },
+    {
+      "id": 299,
+      "date": "2025-12-26",
+      "description": "Direct Deposit - ACME CORP PAYROLL",
+      "amount": 5500.0,
+      "type": "credit",
+      "category": "Income",
+      "subcategory": "Salary",
+      "account_id": "checking_001"
     }
   ]
 }
