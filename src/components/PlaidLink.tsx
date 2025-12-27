@@ -1,7 +1,7 @@
 import { usePlaidLink } from 'react-plaid-link';
 import { Button } from './ui/button';
 import { useAuth } from '../contexts/AuthContext';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { config, logger } from '../config/environment';
 
 interface PlaidLinkProps {
@@ -59,13 +59,15 @@ function PlaidLink({ onSuccess, onExit }: PlaidLinkProps) {
     },
   });
 
+  useEffect(() => {
+    if (ready && linkToken) {
+      open();
+    }
+  }, [ready, linkToken, open]);
+
   const handleConnect = async () => {
     if (!linkToken) {
       await createLinkToken();
-    }
-    
-    if (ready && linkToken) {
-      open();
     }
   };
 

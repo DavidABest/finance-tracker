@@ -29,7 +29,9 @@ app.use(helmet({
       scriptSrc: ["'self'", "https://cdn.plaid.com"],
       imgSrc: ["'self'", "data:", "https:"],
       frameSrc: ["https://cdn.plaid.com"],
+      childSrc: ["https://cdn.plaid.com"],
       connectSrc: ["'self'", "https://*.supabase.co", "https://accounts.google.com", "https://*.plaid.com"],
+      frameAncestors: ["'self'"],
     }
   }
 }));
